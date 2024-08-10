@@ -17,12 +17,12 @@ int main() {
     printf("matrix[%d][%d] = %p \n", i, j, &matrix[i][j]);
 
     int *p = matrix;
-    printf("%d \n", *(p + i * (sizeof(matrix[0]) / sizeof(matrix[0][0])) + j));
-    printf("%p \n", p + i * (sizeof(matrix[0]) / sizeof(matrix[0][0])) + j);
+//    printf("%d \n", *(p + i * (sizeof(matrix[0]) / sizeof(matrix[0][0])) + j));
+//    printf("%p \n", p + i * (sizeof(matrix[0]) / sizeof(matrix[0][0])) + j);
 //    printf("%d \n", *(*(matrix + i) + j));
 //    printf("%p \n", *(matrix + i) + j);
-//    printf("%p \n", p);
-//    printf("%p \n", &matrix[0][0]);
+    printf("%p \n", p);
+    printf("%p \n", &matrix[0][0]);
 
     return 0;
 }
