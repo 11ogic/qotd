@@ -12,17 +12,29 @@ int main() {
             {10,11,12}
     };
 
-    int i = rand() % 4, j = rand() % 3;
-    printf("matrix[%d][%d] = %d \n", i, j, matrix[i][j]);
-    printf("matrix[%d][%d] = %p \n", i, j, &matrix[i][j]);
-
-    int *p = matrix;
+//    int i = rand() % 4, j = rand() % 3;
+//    printf("matrix[%d][%d] = %d \n", i, j, matrix[i][j]);
+//    printf("matrix[%d][%d] = %p \n", i, j, &matrix[i][j]);
+//
+//    int *p = matrix;
 //    printf("%d \n", *(p + i * (sizeof(matrix[0]) / sizeof(matrix[0][0])) + j));
 //    printf("%p \n", p + i * (sizeof(matrix[0]) / sizeof(matrix[0][0])) + j);
 //    printf("%d \n", *(*(matrix + i) + j));
 //    printf("%p \n", *(matrix + i) + j);
-    printf("%p \n", p);
-    printf("%p \n", &matrix[0][0]);
+//    printf("%p \n", p);
+//    printf("%p \n", &matrix[0][0]);
+
+    int n = 10000;
+    int odd = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if ((i + j) & 1) {
+                odd++;
+            }
+        }
+    }
+
+    printf("%d", odd);
 
     return 0;
 }
