@@ -13,5 +13,5 @@ int** myMalloc(int r, int c, int* returnSize, int** returnColumSizes) {
 }
 
 int main() {
-
+    return 0;
 }
